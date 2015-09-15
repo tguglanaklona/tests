@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script>
+        window.onload = function () {
+            setTimeout(function() {
+                document.getElementById("style")
+                        .appendChild(document.createElement("x"));
+                document.getElementById("x")
+                        .appendChild(document.createElement("frame"));
+            }, 0);
+        };
+    </script>
+</head>
+<body>
+<style id="style">
+    @import "404";
+    body {
+        float: left;
+    }
+</style>
+<x id="x">
+    x
+</x>
+</body>
+</html>
