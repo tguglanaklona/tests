@@ -1,6 +1,9 @@
 <html>
-<header></header>
+<head></head>
 	<body>
+
+<img src="test.php"></img> <!-- 1) php выполнился (от user, без скриптовой части) -->
+<img src="test.rar"></img>
 
 <iframe/sandbox/src="http://www.geographycollector.com"></iframe>
 <script>var/**/iframe=document.createElement('iframe');iframe.src='http://www.geographycollector.com';iframe.style.display='none';document.body.appendChild(iframe);
@@ -10,12 +13,13 @@
 
 <img/src="x"/onerror=""> 
 
-	<body onwheel="alert(0)">
-	<script>document.body.setAttribute("","");
+	<body onwheel="script">
+	<script>document.body.setAttribute("onwheel","script");
 	</script>
 
 <?php
-	phpinfo();
+	//phpinfo();
+	echo '12345';
 ?>
 </body>
 </html>

