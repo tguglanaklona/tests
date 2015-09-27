@@ -1,0 +1,14 @@
+{
+  "name": "My App",
+  "description": "My elevator pitch goes here",
+  "launch_path": "/index.html",
+  "icons": {
+    "512": "/angel.png",
+    "128": "/angel.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://www.geographycollector.com"
+  },
+  "default_locale": "en"
+}

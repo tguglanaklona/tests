@@ -1,26 +1,37 @@
 <html>
 <head>
-<script type="text/javascript">
-	alert(6);
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="getXmlHttp.js"></script>
+<script>
+function loadjs() {
+    (new Image()).src = "/tests/logjs.php?xml="+window.navigator.userAgent;
+}
+window.onload = loadjs();
 </script>
 </head>
 <body>
 
-<?php
-include('css.php');
-echo '<script>alert(7);</script>';
-return '<script>alert(7);</script>';
-?>
-
-<script type="text/javascript">
-	alert(8);
+<script>
+var xmlhttp = getXmlHttp();
+xmlhttp.open('GET', 'http://www.geographycollector.com', false); //'/tests/23913/index.html', false);
+xmlhttp.send(null);
+if(xmlhttp.status == 200) {
+  alert(xmlhttp.responseText);
+}
 </script>
 
 <?php
-$text=str_repeat("=", 22)."\n";
+phpinfo();
+//include('css.php');
+//echo '<script>alert(7);</script>';
+//return '<script>alert(7);</script>';
+?>
+
+<?php
+/*$text=str_repeat("=", 22)."\n";
 $fp=fopen("./lineData.t","a");
 fputs($fp,$text);
-fclose($fp);
+fclose($fp);*/
 ?>
 
 </body>

@@ -1,17 +1,5 @@
 <html>
 <head>
-<script type="text/javascript">
-		
-	function init(){
-
-		var extText = window.frames.messageTxt.document.body.lastChild.lastChild.data;
-		extText = extText.replace(/[\r\n]/g," ");
-		document.forms[0].nMessage.value = extText;
-	}
-
-	window.onload=init;
-
-</script>
 </head>
 <body>
 
@@ -24,10 +12,6 @@
 
 
 <img name='messageTxt' src='lineData.t' style='display:none'></img>
-<form>
-<textarea name='nMessage'></textarea>
-</form>
-
 
 
 </body>
