@@ -12,5 +12,6 @@ function getXmlHttp(){
   if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
     xmlhttp = new XMLHttpRequest();
   }
+  console.log("return");
   return xmlhttp;
 }

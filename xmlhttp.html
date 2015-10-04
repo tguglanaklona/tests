@@ -1,0 +1,61 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+function getXmlHttp(){
+  var xmlhttp;
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
+  if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+    xmlhttp = new XMLHttpRequest();
+  }
+  return xmlhttp;
+}
+//console.log('Hi');
+
+var xmlhttp = getXmlHttp();
+xmlhttp.open('GET', 'https://sp2all.ru/api/setProfile/', true);
+xhr.withCredentials = true; //send credentials (such a HTTP Cookies, HTTP Authentication and client-side SSL certificates)
+xmlhttp.onreadystatechange = checkData;
+xmlhttp.send(null);
+
+function checkData(e) {
+  //console.log('xmlhttp.readyState == '+xmlhttp.readyState);
+  //console.log('xmlhttp.status == '+xmlhttp.status);
+  //console.log('xmlhttp.responseText == '+xmlhttp.responseText);
+
+  if (xmlhttp.readyState==4) {
+    if (xmlhttp.status==200){
+
+      alert(xmlhttp.responseText);
+
+      if (xmlhttp.getAllResponseHeaders()){
+      	console.log('xmlhttp.getAllResponseHeaders == '+xmlhttp.getAllResponseHeaders());
+      }
+      else{
+    	  alert("Your browser doesn't support getAllResponseHeaders method");
+      }
+
+  	}
+  }
+};
+
+//console.log(xmlhttp.responseText);
+
+
+</script>
+
+</body>
+</html>
+
+

